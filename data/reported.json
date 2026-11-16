@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-16",
+  "provenance": "Author-reported results, independently transcribed; not locally reproduced model evaluations.",
+  "paper": "https://mit-han-lab.github.io/pear-blog/paper.pdf",
+  "blog": "https://mit-han-lab.github.io/pear-blog/",
+  "upstream_commit": "f32aa1f7c2ec9c3f45630cc9f8541b3201e8e087",
+  "conditions": [
+    {
+      "id": "standard",
+      "label": "Standard LIBERO",
+      "pear": 74.4,
+      "pi05": 96.9,
+      "source": "Paper Table 2; pi05 from openpi"
+    },
+    {
+      "id": "task",
+      "label": "Changed goal",
+      "pear": 57.4,
+      "pi05": 0.75,
+      "source": "Paper Table 3; pi05 from LIBERO-Pro first-version tables"
+    },
+    {
+      "id": "swap",
+      "label": "Swapped positions",
+      "pear": 57.5,
+      "pi05": 20.8,
+      "source": "Paper Table 3"
+    },
+    {
+      "id": "lan",
+      "label": "Reworded instruction",
+      "pear": 73.3,
+      "pi05": 95.8,
+      "source": "Paper Table 3"
+    },
+    {
+      "id": "object",
+      "label": "Restyled objects",
+      "pear": 60.2,
+      "pi05": 96,
+      "source": "Paper Table 3"
+    }
+  ],
+  "real": {
+    "base": 0,
+    "libero_only": 7,
+    "final": 18,
+    "n": 30,
+    "source": "Paper Table 7"
+  },
+  "effort": {
+    "low": {
+      "tokens": 860,
+      "success": 21.9
+    },
+    "xhigh": {
+      "tokens": 3230,
+      "success": 74.4
+    },
+    "source": "Blog Figure 12; success uses BF16 LIBERO-only checkpoint"
+  },
+  "decode": {
+    "rtx5090": 221,
+    "gb300": 747,
+    "m5max": 52,
+    "source": "Blog Figure 12; NVFP4 + DFlash2, GPU megakernel / Splash on Mac"
+  },
+  "robolab": {
+    "pear": 37.3,
+    "cosmos": 36.8,
+    "pear_complex": 13.2,
+    "cosmos_complex": 25.3,
+    "source": "Paper Table 5; selected external leaderboard baselines as of 2026-10-29, not a current ranking"
+  },
+  "robodojo_full": {
+    "successes": 21,
+    "episodes": 540,
+    "dimension_macro_percent": 5.5,
+    "context_exhausted": 370,
+    "source": "Paper Appendix E"
+  }
+}
+

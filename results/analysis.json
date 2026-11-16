@@ -1,0 +1,57 @@
+{
+  "status": "Completed reanalysis of published data; no model inference or training performed.",
+  "workload_mix": {
+    "crossover_percent": 28.42703727100442,
+    "caveat": "Illustrative two-condition weighting of cross-source aggregates; not a deployment threshold or causal experiment.",
+    "at_50_percent": {
+      "pear": 65.9,
+      "pi05": 48.825
+    }
+  },
+  "real_trials": {
+    "n": 30,
+    "successes": {
+      "base_success": 0,
+      "libero_success": 7,
+      "pear_success": 18
+    },
+    "final_success_percent": 60,
+    "descriptive_wilson_95_percent": [
+      42.32036025332248,
+      75.40937188319815
+    ],
+    "interval_caveat": "Assumes independent Bernoulli trials; these 30 trials repeat 15 scenes/objects. This is descriptive, not a population guarantee.",
+    "final_failures": {
+      "unaligned": 3,
+      "round_budget": 6,
+      "toppled": 2,
+      "rolled_away": 1
+    },
+    "libero_to_final": {
+      "both_success": 5,
+      "new_success": 13,
+      "lost_success": 2
+    },
+    "successful_rounds_median": 13.0
+  },
+  "latency_sensitivity_seconds": {
+    "rtx5090": {
+      "low": 3.8914027149321266,
+      "xhigh": 14.615384615384615
+    },
+    "gb300": {
+      "low": 1.1512717536813923,
+      "xhigh": 4.323962516733601
+    },
+    "m5max": {
+      "low": 16.53846153846154,
+      "xhigh": 62.11538461538461
+    }
+  },
+  "latency_caveat": "Arithmetic sensitivity only. BF16 mean reasoning length / NVFP4 decode rate; excludes prefill, vision, movement, networking, and quantization-induced longer reasoning.",
+  "full_robodojo": {
+    "micro_percent": 3.888888888888889,
+    "reported_dimension_macro_percent": 5.5,
+    "context_exhaustion_percent": 68.51851851851852
+  }
+}
